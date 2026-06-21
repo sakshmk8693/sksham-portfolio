@@ -245,3 +245,38 @@ if (modeSwitch) {
     }
   });
 }
+/* ── MOBILE: AUTO-ACTIVATE CARDS ON SCROLL & FAST TAP ── */
+if (isTouchDevice) {
+  const cards = document.querySelectorAll('.interactive-card');
+  
+  // 1. Magic Scroll Effect: Card center mein aate hi effect chalu
+  const cardObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      // Agar card screen ke middle 30% hisse mein hai
+      if (entry.isIntersecting) {
+        entry.target.classList.add('mouse-hover');
+      } else {
+        entry.target.classList.remove('mouse-hover');
+      }
+    });
+  }, { 
+    // Ye margin decide karta hai ki effect kab trigger hoga (top aur bottom se 35% chhodkar)
+    rootMargin: '-35% 0px -35% 0px', 
+    threshold: 0 
+  });
+
+  cards.forEach(card => {
+    // Scroll observation start
+    cardObserver.observe(card);
+    
+    // 2. Instant Touch (Tap delay khatam karne ke liye)
+    card.addEventListener('touchstart', () => {
+      card.classList.add('mouse-hover');
+    }, {passive: true});
+    
+    card.addEventListener('touchend', () => {
+      // Hath hatane ke baad thodi der tak chamak rahe
+      setTimeout(() => card.classList.remove('mouse-hover'), 600); 
+    }, {passive: true});
+  });
+}
