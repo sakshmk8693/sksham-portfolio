@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Outfit:wght@300;400;600;800;900&display=swap');
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 a { text-decoration: none !important; }
 p, h1, h2, h3, h4, span, div { overflow-wrap: break-word; word-wrap: break-word; }
@@ -46,8 +47,8 @@ body {
   position: absolute; border-radius: 50%; filter: blur(120px); opacity: 0.3;
   animation: float 20s infinite alternate ease-in-out;
 }
-.orb-1 { width: 500px; height: 500px; background: var(--accent-primary); top: -10%; left: -10%; }
-.orb-2 { width: 600px; height: 600px; background: var(--accent-secondary); bottom: -20%; right: -10%; animation-delay: -5s; }
+.orb-1 { width: 1500px; height: 500px; background:rgb(114, 71, 245); top: 1;}
+.orb-2 { width: 600px; height: 600px; background: rgb(0, 0, 0); bottom: -20%; right: -10%; animation-delay: -5s; }
 
 @keyframes float { 100% { transform: translate(50px, 50px) scale(1.1); } }
 
@@ -58,23 +59,23 @@ body {
 
 /* Ye tail (poonch) hai */
 .star-fall span {
-  position: absolute; width: 2px; height: 200px;
+  position: absolute; width: 1px; height: 200px;
   background: linear-gradient(to bottom, transparent, var(--accent-primary));
   animation: fall linear infinite; opacity: 0;
 }
 
-/* Ye naya code hai: Star ke end par chamakta hua sitara (Glow) */
+/* Star ke end par chamakta hua sitara (Glow) */
 .star-fall span::after {
   content: '';
   position: absolute;
-  bottom: 0;              /* Tail ke bilkul niche */
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 3px;             /* Sitare ka size */
+  width: 3px;
   height: 3px;
-  background: #ffffff;    /* Safed chamak */
-  border-radius: 50%;     /* Gol aakar */
-  box-shadow: 0 0 15px 5px var(--accent-primary), 0 0 30px 10px #ffffff; /* Tez glow effect */
+  background: #ffffff;
+  border-radius: 100%;
+  box-shadow: 0 0 15px 5px var(--accent-primary), 0 0 30px 10px #ffffff;
 }
 
 @keyframes fall {
@@ -82,19 +83,32 @@ body {
   100% { transform: translateY(100vh); opacity: 0; }
 }
 
-/* ── CURSOR ── */
-.cursor-dot { position: fixed; width: 6px; height: 6px; background: var(--accent-primary); border-radius: 50%; pointer-events: none; z-index: 10001; transform: translate(-50%, -50%); box-shadow: 0 0 12px var(--accent-primary); transition: background 0.2s;}
+/* ── CURSOR & HOVER MOTION EFFECT ── */
+.cursor-dot { position: fixed; width: 3px; height: 3px; background: var(--accent-primary); border-radius: 50%; pointer-events: none; z-index: 10001; transform: translate(-50%, -50%); box-shadow: 0 0 12px var(--accent-primary); transition: background 0.2s;}
+
 .cursor-ring { 
-  position: fixed; width: 40px; height: 40px; 
+  position: fixed; width: 25px; height: 25px; 
   border-radius: 50%; pointer-events: none; z-index: 10000; 
   transform: translate(-50%, -50%); 
-  transition: width 0.3s, height 0.3s, background 0.3s, border-color 0.3s; 
+  transition: width 0.3s, height 0.3s, background 0.3, border-color 0.3s; 
   border: 1.5px solid rgba(255, 255, 255, 0.4); background: transparent;
 }
+
+/* Naya Cursor Motion Effect */
 .cursor-ring.hover { 
-  width: 65px; height: 65px; background: rgba(0, 229, 255, 0.08);
-  border-color: var(--accent-primary); box-shadow: 0 0 15px rgba(0, 229, 255, 0.2);
+  width: 40px; height: 40px; 
+  background: rgba(0, 229, 255, 0.1);
+  border: 2px dashed var(--accent-primary); /* Dashed border for radar look */
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.4);
+  animation: cursorMotion 2s linear infinite; /* Spinning and pulsing */
 }
+
+@keyframes cursorMotion {
+  0% { transform: translate(-50%, -50%) rotate(0deg) scale(1); }
+  50% { transform: translate(-50%, -50%) rotate(180deg) scale(1.1); } /* Halka sa pulse karega */
+  100% { transform: translate(-50%, -50%) rotate(360deg) scale(1); }
+}
+
 .cursor-torch { position: fixed; width: 350px; height: 350px; background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, rgba(255,255,255,0) 70%); pointer-events: none; z-index: 9999; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.5s ease; }
 
 @media (hover: none) and (pointer: coarse) {
@@ -246,7 +260,12 @@ body {
 }
 
 .glass-card > * { position: relative; z-index: 4; }
-
+.interactive-card {
+  /* Mobile ka default grey tap box hata dega */
+  -webkit-tap-highlight-color: transparent; 
+  /* Browser GPU ko pehle se ready rakhega smooth animation ke liye */
+  will-change: transform, box-shadow; 
+}
 /* Movement and Hover Trigger (Forced CSS + JS) */
 .interactive-card:hover,
 .interactive-card.mouse-hover {
@@ -260,7 +279,6 @@ body {
 .interactive-card.mouse-hover::before { 
   left: 150%; 
 }
-.interactive-card:hover::before { left: 150%; }
 
 /* Typography inside components */
 .about-layout { display: grid; grid-template-columns: 1fr 1.5fr; gap: 3rem; width: 100%; }
@@ -349,57 +367,146 @@ body.light-mode .form-input { background: #f1f5f9; border-color: #cbd5e1; color:
 body.light-mode .form-input:focus { border-color: var(--accent-primary); }
 
 /* Responsive Adjustments */
-@media (max-width: 1024px) {
-  .section-boundary { padding: 3rem 2rem; }
-  .about-layout, .contact-layout { grid-template-columns: 1fr; gap: 2.5rem;}
-  .hero-cartoon { right: -5rem; opacity: 0.2; }
-  .certs-grid, .skills-grid { grid-template-columns: repeat(2, 1fr); }
-}
 @media (max-width: 768px) {
   .section-boundary { padding: 2rem 1.5rem; border-radius: 16px; margin: 0 4%; width: 92%; }
   .navbar { padding: 1.2rem 5%; }
+  .nav-logo { font-size: 1rem; }
   .nav-links { display: none; position: fixed; inset: 0; background: rgba(7,8,15,0.98); backdrop-filter: blur(20px); flex-direction: column; align-items: center; justify-content: center; gap: 2rem; z-index: 105; }
   .nav-links.open { display: flex; }
   .nav-link { font-size: 1.2rem; }
   .nav-actions { display: none; } 
   .hamburger { display: flex; }
   .section { padding: 3rem 0; margin-top: 2rem;}
-  .hero { padding-top: 6rem; margin-top: 0; }
-  .hero-cartoon { display: none; }
+  .about-layout { 
+    display: flex !important; 
+    flex-direction: column !important; 
+    gap: 2rem; 
+  }
+  .about-left, .about-right {
+    width: 100% !important;
+  }
+  /* ── SECURE COMMS (CONTACT) SECTION MOBILE FIX ── */
+  .contact-layout { 
+    display: flex !important; 
+    flex-direction: column !important; 
+    gap: 2rem; 
+  }
+  .contact-left, .contact-right {
+    width: 100% !important;
+  }
+  /* ── 1. HERO MAIN LAYOUT FOR MOBILE ── */
+  .hero { padding-top: 5rem; margin-top: 0; }
+  
+  /* INVISIBLE BOX FIX: Ye code us extra margin/padding ko zero kar dega */
+  .hero-boundary { width: 100% !important; margin: 0 !important; padding: 0 !important; }
+  .hero-3d-wrapper { padding: 0 !important; }
+  
+  .hero-bottom { flex-direction: column; gap: 2.5rem; width: 100%; align-items: flex-start; }
+
+  /* ── 2. TEXT & CHIPS LEFT-ALIGN ── */
+  .hero-massive-text { 
+    text-align: left !important; 
+    margin-left: 5%; /* Niche wale box ki alignment se set kiya */
+    width: 90%;
+  }
+  .hero-bottom-left {
+    width: 100%;
+  }
+  .hero-tech-chips { 
+    justify-content: flex-start !important; 
+    margin-left: 5%; 
+    width: 90%;
+    gap: 0.6rem;
+  }
+  .chip {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  /* ── 3. RESUME/OBJECTIVE CARD PERFECT MATCH ── */
+  .hero-bottom-right { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    /* EXACT NICHE WALE BOX KI WIDTH AUR MARGIN */
+    width: 92% !important; 
+    max-width: 100%;
+    margin: 0 4% !important; 
+    padding: 2rem 1.5rem !important;
+    box-sizing: border-box !important;
+  }
+  .hero-description {
+    text-align: center !important;
+  }
+  .cta-outline { 
+    justify-content: center; 
+    width: auto; 
+    margin: 0 auto;
+  }
+  
+  /* ── 4. CARTOON IMAGE AS LOW LIGHT BACKGROUND ── */
+  .hero-cartoon { 
+    display: block !important; 
+    position: absolute; 
+    top: 40%; 
+    left: 50%;
+    transform: translate(-50%, -50%) !important; 
+    width: 85%; 
+    opacity: 0.35 !important; /* FIX: Pehle 0.12 tha, ab isko solid kar diya taaki stars aar-paar na dikhein */
+    pointer-events: none; 
+    z-index: 0 !important; /* Stars (-1) se aage, Text (1) se piche */
+  }
+  
+  .hero-cartoon img {
+    width: 100%;
+    height: auto;
+    filter: brightness(0.35) contrast(1.2); /* FIX: Image dark kar di taaki solid hone ke baad bhi tumhara white text ekdum clear padha jaye */
+  }
+
   .project-item { grid-template-columns: 1fr; padding: 1.8rem; gap: 1rem; }
   .certs-grid, .skills-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+
+  .footer-inner { flex-direction: column; justify-content: center; align-items: center; text-align: center; gap: 1rem; }
+  .footer-left, .footer-right { width: 100%; text-align: center; display: block; }
 }
+
+@media (max-width: 480px) {
+  .hero-massive-text .line { font-size: clamp(1.6rem, 7vw, 2.3rem); letter-spacing: -1px; }
+  .stat-number { font-size: 2rem; }
+  .btn-live { width: 100%; justify-content: center; }
+  .project-header { flex-direction: column; align-items: center; text-align: center; }
+  .contact-link-item { flex-direction: column; align-items: center; text-align: center; gap: 0.8rem; }
+  .contact-arrow { margin-left: 0; }
+}
+
 /* ── COLORFUL MOVING LIGHT BORDER EFFECT ── */
 .glass-card::after {
   content: '';
   position: absolute;
   inset: 0;
-  border-radius: 16px; /* Card ki roundness se match karne ke liye */
-  padding: 2px; /* Border light ki motai */
+  border-radius: 16px; 
+  padding: 2px; 
   
-  /* Yahan saare mast colors hain: Cyan, Purple, Red, Orange */
   background: linear-gradient(115deg, var(--accent-primary), var(--accent-secondary), var(--alert-red), var(--neon-orange), var(--accent-primary));
   background-size: 300% 300%;
   
-  /* Masking trick taaki sirf border dikhe, andar ka hissa nahi */
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   
   z-index: 5;
-  opacity: 0; /* Normal state mein off rahega */
+  opacity: 0; 
   transition: opacity 0.4s ease;
   pointer-events: none;
 }
 
-/* Jaise hi mouse aayega, colorful light on hogi aur move karna shuru karegi */
 .interactive-card:hover::after,
 .interactive-card.mouse-hover::after {
   opacity: 1;
-  animation: movingColorfulLight 3s linear infinite; /* 3s speed hai */
+  animation: movingColorfulLight 3s linear infinite; 
 }
 
-/* Light ko gol ghumane ka animation */
 @keyframes movingColorfulLight {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
