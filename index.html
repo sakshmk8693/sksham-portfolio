@@ -17,11 +17,18 @@
 
 <body>
 
-  <div class="animated-grid-bg"></div>
-  <div class="stars-container">
-    <div class="shooting-star"></div>
-    <div class="shooting-star"></div>
-    <div class="shooting-star"></div>
+  <div class="ambient-bg">
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+  </div>
+
+  <!-- Vertical Falling Stars -->
+  <div class="star-fall">
+    <!-- Time badha diya hai (8s, 10s, 9s, 12s) taaki dheere giren -->
+    <span style="left: 15%; animation-duration: 8s; animation-delay: 0s;"></span>
+    <span style="left: 45%; animation-duration: 10s; animation-delay: 1.5s;"></span>
+    <span style="left: 75%; animation-duration: 9s; animation-delay: 0.5s;"></span>
+    <span style="left: 90%; animation-duration: 12s; animation-delay: 2s;"></span>
   </div>
 
   <div class="cursor-dot" id="cursorDot"></div>
@@ -34,12 +41,12 @@
       <div class="preloader-bar-track">
         <div class="preloader-bar-fill" id="preloaderBar"></div>
       </div>
-      <span class="preloader-label"><i class="fa-solid fa-microchip"></i> INITIALIZING SYSTEM...</span>
+      <span class="preloader-label"><i class="fa-solid fa-microchip" style="color: var(--accent-primary); font-size: 1.2rem;"></i> INITIALIZING SYSTEM...</span>
     </div>
   </div>
 
   <nav class="navbar" id="navbar">
-    <a href="#home" class="nav-logo"><i class="fa-solid fa-terminal" style="color: var(--terminal-green);"></i> SAKSHAM_KAUSHIK</a>
+    <a href="#home" class="nav-logo"><i class="fa-solid fa-terminal" style="color: var(--accent-primary); font-size: 1.2rem;"></i> SAKSHAM_KAUSHIK</a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#home" class="nav-link active">HOME</a></li>
       <li><a href="#about" class="nav-link">ABOUT & LEADERSHIP</a></li>
@@ -62,45 +69,47 @@
   </nav>
 
   <section class="section hero" id="home">
-    <div class="hero-3d-wrapper" id="hero3d">
-      <div class="hero-cartoon" id="heroCartoon">
-        <img src="cartoon-dev.png" alt="Cybersecurity Professional" onerror="this.style.display='none'" />
-      </div>
-
-      <div class="hero-massive-text">
-        <div class="line line-1" data-scroll>NETWORK SECURITY</div>
-        <div class="line line-2 gradient-text-cyber" data-scroll>CYBER SECURITY</div>
-        <div class="line line-4" data-scroll>VAPT</div>
-        <div class="line line-3 gradient-text" data-scroll>AI</div>
-      </div>
-
-      <div class="hero-bottom">
-        <div class="hero-bottom-left">
-          <div class="hero-tech-chips">
-            <span class="chip"><i class="fa-solid fa-crosshairs"></i>  THREAT HUNTING </span>
-            <span class="chip"><i class="fa-solid fa-bug"></i> VAPT</span>
-            <span class="chip"><i class="fa-solid fa-bug"></i> BURP SUITE</span>
-            <span class="chip"><i class="fa-solid fa-bug"></i> KALI LINUX</span>
-            <span class="chip"><i class="fa-solid fa-brain"></i> APPLIED GEN AI </span>
-            <span class="chip"><i class="fa-solid fa-users"></i>  TEAM LEADERSHIP </span>
-            <span class="chip"><i class="fa-solid fa-sitemap"></i>  SYSTEM DESIGN </span>
-          </div>
+    <div class="section-boundary hero-boundary">
+      <div class="hero-3d-wrapper" id="hero3d">
+        <div class="hero-cartoon" id="heroCartoon">
+          <img src="cartoon-dev.png" alt="Cybersecurity Professional" onerror="this.style.display='none'" />
         </div>
-        <div class="hero-bottom-right glass-card">
-          <p class="hero-description">
-            I engineer impenetrable systems, hunt vulnerabilities, and lead technical teams to success. Blending an offensive security mindset with full-stack system design, I specialize in advanced VAPT, network architecture, and leveraging Applied Generative AI to automate threat intelligence and zero-day defense.
-          </p>
-          <a href="sakshm_kaushik_resume.pdf" target="_blank" rel="noopener" class="cta-outline">
-            <span><i class="fa-regular fa-file-pdf"></i> EXTRACT DOSSIER</span>
-            <span class="arrow-circle">&rarr;</span>
-          </a>
+
+        <div class="hero-massive-text">
+          <div class="line line-1" data-scroll>NETWORK SECURITY</div>
+          <div class="line line-2 gradient-text-cyber" data-scroll>CYBER SECURITY</div>
+          <div class="line line-4" data-scroll>VAPT</div>
+          <div class="line line-3 gradient-text" data-scroll>AI</div>
+        </div>
+
+        <div class="hero-bottom">
+          <div class="hero-bottom-left">
+            <div class="hero-tech-chips">
+              <span class="chip"><i class="fa-solid fa-crosshairs"></i> THREAT HUNTING</span>
+              <span class="chip"><i class="fa-solid fa-bug"></i> VAPT</span>
+              <span class="chip"><i class="fa-solid fa-shield-halved"></i> BURP SUITE</span>
+              <span class="chip"><i class="fa-brands fa-linux"></i> KALI LINUX</span>
+              <span class="chip"><i class="fa-solid fa-brain"></i> APPLIED GEN AI</span>
+              <span class="chip"><i class="fa-solid fa-users"></i> TEAM LEADERSHIP</span>
+              <span class="chip"><i class="fa-solid fa-sitemap"></i> SYSTEM DESIGN</span>
+            </div>
+          </div>
+          <div class="hero-bottom-right glass-card interactive-card">
+            <p class="hero-description">
+              I engineer impenetrable systems, hunt vulnerabilities, and lead technical teams to success. Blending an offensive security mindset with full-stack system design, I specialize in advanced VAPT, network architecture, and leveraging Applied Generative AI to automate threat intelligence and zero-day defense.
+            </p>
+            <a href="sakshm_kaushik_resume.pdf" target="_blank" rel="noopener" class="cta-outline">
+              <span><i class="fa-regular fa-file-pdf" style="color: var(--alert-red); font-size: 1.2rem;"></i> VIEW REAUME</span>
+              <span class="arrow-circle">&rarr;</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <section class="section" id="about">
-    <div class="container">
+    <div class="section-boundary container">
       <div class="section-header-row">
         <span class="section-num">01</span>
         <h2 class="section-big-title">LEADERSHIP & ARCHITECTURE</h2>
@@ -108,22 +117,22 @@
       <div class="about-layout">
         <div class="about-left">
           <div class="about-stat-block">
-            <div class="stat-big glass-card reveal-item">
+            <div class="stat-big glass-card interactive-card reveal-item">
               <span class="stat-number">100+</span>
               <span class="stat-text"><i class="fa-solid fa-shield-virus"></i> SECURITY LABS BREACHED (TryHackMe & PortSwigger)</span>
             </div>
-            <div class="stat-big glass-card reveal-item">
+            <div class="stat-big glass-card interactive-card reveal-item">
               <span class="stat-number">LEAD</span>
-              <span class="stat-text"><i class="fa-brands fa-youtube"></i> FOUNDER & EDUCATOR @ ENGINEERING EXPRESS YOUTUBE</span>
+              <span class="stat-text"><i class="fa-brands fa-youtube" style="color: var(--alert-red);"></i> FOUNDER & EDUCATOR @ ENGINEERING EXPRESS</span>
             </div>
-            <div class="stat-big glass-card reveal-item">
+            <div class="stat-big glass-card interactive-card reveal-item">
               <span class="stat-number">AI DEV</span>
               <span class="stat-text"><i class="fa-solid fa-robot"></i> GEN-AI AUTOMATION IN SEC-OPS & SYSTEM DEV</span>
             </div>
           </div>
         </div>
-        <div class="about-right glass-card reveal-item">
-          <h3 class="about-subtitle"><i class="fa-solid fa-graduation-cap"></i> B.TECH COMPUTER SCIENCE & ENGINEERING (AKTU, 2022-2026)</h3>
+        <div class="about-right glass-card interactive-card reveal-item">
+          <h3 class="about-subtitle"><i class="fa-solid fa-graduation-cap" style="font-size: 1.5rem;"></i> B.TECH COMPUTER SCIENCE & ENGINEERING (AKTU, 2022-2026)</h3>
           <p class="about-para">
             My approach to technology goes beyond just writing code—it's about building ecosystems and leading people. As the Owner and Lead Educator of the <strong>Engineering Express</strong> YouTube channel, I actively teach engineering concepts and manage a dedicated team. To support this, I engineered a secure platform (eexpress.in) to distribute and monetize DRM-protected study materials, refining my skills in team management, product ownership, and technical communication.
           </p>
@@ -136,23 +145,23 @@
   </section>
 
   <section class="section" id="experience">
-    <div class="container">
+    <div class="section-boundary container">
       <div class="section-header-row">
         <span class="section-num">02</span>
         <h2 class="section-big-title">EXPERIENCE & CREDENTIALS</h2>
       </div>
       
-      <h3 class="skill-group-title" style="margin-top: 1rem;"><i class="fa-solid fa-briefcase"></i> // PROFESSIONAL EXPOSURE</h3>
+      <h3 class="skill-group-title"><i class="fa-solid fa-briefcase"></i> // PROFESSIONAL EXPOSURE</h3>
       <div class="certs-grid" style="margin-bottom: 3rem;">
-        <div class="cert-card glass-card reveal-item">
+        <div class="cert-card glass-card interactive-card reveal-item">
           <div class="cert-indicator"></div>
-          <h3 class="cert-title">Cyber Security Intern</h3>
+          <h3 class="cert-title"><i class="fa-solid fa-user-secret" style="color: var(--accent-primary);"></i> Cyber Security Intern</h3>
           <p class="cert-issuer">Codec Technologies Pvt. Ltd. | Oct 2025 – Jan 2026</p>
           <p class="cert-desc">Executed VAPT operations, security audits, and live traffic analysis in an AICTE & ICAC approved environment. Focused on identifying system loopholes and drafting remediation strategies.</p>
         </div>
-        <div class="cert-card glass-card reveal-item">
+        <div class="cert-card glass-card interactive-card reveal-item">
           <div class="cert-indicator"></div>
-          <h3 class="cert-title">Network Security Intern</h3>
+          <h3 class="cert-title"><i class="fa-solid fa-network-wired" style="color: var(--accent-secondary);"></i> Network Security Intern</h3>
           <p class="cert-issuer">ITPF Technology Pvt. Ltd. | Mar 2025 – Jun 2025</p>
           <p class="cert-desc">Spearheaded the "Design and Analysis of TAXNET Network". Handled core configurations including advanced routing, switching protocols, and network vulnerability assessments.</p>
         </div>
@@ -160,21 +169,21 @@
 
       <h3 class="skill-group-title"><i class="fa-solid fa-certificate"></i> // SPECIALIZED CERTIFICATIONS (TUTUDE)</h3>
       <div class="certs-grid">
-        <div class="cert-card glass-card reveal-item">
+        <div class="cert-card glass-card interactive-card reveal-item">
           <div class="cert-indicator"></div>
-          <h3 class="cert-title">Ethical Hacking</h3>
+          <h3 class="cert-title"><i class="fa-solid fa-mask" style="color: var(--accent-primary);"></i> Ethical Hacking</h3>
           <p class="cert-issuer">Tutude Enrolled Courses</p>
           <p class="cert-desc">Enrolled: 22nd Sept 2025<br>Progress: 100% Completed<br><br>Mastered offensive methodologies, payload crafting, and comprehensive exploitation techniques across diverse attack vectors.</p>
         </div>
-        <div class="cert-card glass-card reveal-item">
+        <div class="cert-card glass-card interactive-card reveal-item">
           <div class="cert-indicator"></div>
-          <h3 class="cert-title">Cloud Computing</h3>
+          <h3 class="cert-title"><i class="fa-solid fa-cloud-arrow-up" style="color: var(--accent-secondary);"></i> Cloud Computing</h3>
           <p class="cert-issuer">Tutude Enrolled Courses</p>
           <p class="cert-desc">Enrolled: 22nd Sept 2025<br>Progress: 100% Completed<br><br>Deep-dive into cloud architectures, deployment models, and securing scalable infrastructure against modern threats.</p>
         </div>
-        <div class="cert-card glass-card reveal-item">
+        <div class="cert-card glass-card interactive-card reveal-item">
           <div class="cert-indicator"></div>
-          <h3 class="cert-title">System Design</h3>
+          <h3 class="cert-title"><i class="fa-solid fa-cubes" style="color: var(--accent-primary);"></i> System Design</h3>
           <p class="cert-issuer">Tutude Enrolled Courses</p>
           <p class="cert-desc">Enrolled: 22nd Sept 2025<br>Progress: 100% Completed<br><br>Architecting robust, fault-tolerant, and highly secure applications capable of handling massive data loads.</p>
         </div>
@@ -183,18 +192,18 @@
   </section>
 
   <section class="section" id="projects">
-    <div class="container">
+    <div class="section-boundary container">
       <div class="section-header-row">
         <span class="section-num">03</span>
         <h2 class="section-big-title">STRATEGIC INITIATIVES</h2>
       </div>
 
       <div class="project-list">
-        <article class="project-item glass-card reveal-item" data-index="0">
+        <article class="project-item glass-card interactive-card reveal-item" data-index="0">
           <div class="project-index">01</div>
           <div class="project-body">
             <div class="project-header">
-              <h3 class="project-name">ENGINEERING EXPRESS (EExpress)</h3>
+              <h3 class="project-name"><i class="fa-solid fa-book-open-reader"></i> ENGINEERING EXPRESS (EExpress)</h3>
               <div class="project-links">
                 <a href="https://eexpress.in" target="_blank" rel="noopener" class="btn-live">
                   <span class="live-dot"></span> eexpress.in
@@ -203,7 +212,7 @@
             </div>
             <p class="project-desc">A highly secure educational ecosystem created to securely distribute and monetize academic notes alongside the Engineering Express YouTube channel. Handled full team management and product lifecycle.</p>
             <div class="project-meta-row">
-              <span class="meta-tag"><i class="fa-brands fa-flutter"></i> FLUTTER</span>
+              <span class="meta-tag"><i class="fa-brands fa-flutter" style="color: #54C5F8;"></i> FLUTTER</span>
               <span class="meta-tag"><i class="fa-solid fa-lock"></i> APP SEC</span>
               <span class="meta-tag"><i class="fa-solid fa-robot"></i> GEN AI</span>
               <span class="meta-tag"><i class="fa-solid fa-people-group"></i> TEAM MANAGEMENT</span>
@@ -216,16 +225,16 @@
           </div>
         </article>
 
-        <article class="project-item glass-card reveal-item" data-index="1">
+        <article class="project-item glass-card interactive-card reveal-item" data-index="1">
           <div class="project-index">02</div>
           <div class="project-body">
             <div class="project-header">
-              <h3 class="project-name">VANYA GIFTS E-COMMERCE ARCHITECTURE</h3>
+              <h3 class="project-name"><i class="fa-solid fa-cart-shopping"></i> VANYA GIFTS E-COMMERCE</h3>
             </div>
             <p class="project-desc">Designed the end-to-end full-stack architecture for a scalable retail e-commerce system. Encompasses a mobile client, web interface, and a hardened administrative control panel with Gen-AI assisted rapid prototyping.</p>
             <div class="project-meta-row">
               <span class="meta-tag"><i class="fa-solid fa-server"></i> SYSTEM DESIGN</span>
-              <span class="meta-tag"><i class="fa-solid fa-database"></i> SUPABASE</span>
+              <span class="meta-tag"><i class="fa-solid fa-database" style="color: #3ECF8E;"></i> SUPABASE</span>
               <span class="meta-tag"><i class="fa-solid fa-key"></i> SECURE AUTH</span>
               <span class="project-role">ROLE: LEAD ARCHITECT</span>
             </div>
@@ -236,15 +245,15 @@
           </div>
         </article>
 
-        <article class="project-item glass-card reveal-item" data-index="2">
+        <article class="project-item glass-card interactive-card reveal-item" data-index="2">
           <div class="project-index">03</div>
           <div class="project-body">
             <div class="project-header">
-              <h3 class="project-name">OWASP VAPT & AI-ASSISTED ENTROPY ANALYZER</h3>
+              <h3 class="project-name"><i class="fa-solid fa-magnifying-glass-chart"></i> OWASP VAPT & AI-ASSISTED ENTROPY ANALYZER</h3>
             </div>
             <p class="project-desc">Engineered an educational cryptographic tool to calculate realistic password entropy against modern dictionary and brute-force attacks. Leveraged AI to generate professional OWASP Top 10 remediation reports rapidly and accurately.</p>
             <div class="project-meta-row">
-              <span class="meta-tag"><i class="fa-brands fa-python"></i> PYTHON</span>
+              <span class="meta-tag"><i class="fa-brands fa-python" style="color: #FFD43B;"></i> PYTHON</span>
               <span class="meta-tag"><i class="fa-solid fa-microchip"></i> APPLIED AI</span>
               <span class="meta-tag"><i class="fa-solid fa-shield-halved"></i> VAPT</span>
               <span class="project-role">ROLE: SECURITY RESEARCHER</span>
@@ -256,14 +265,14 @@
   </section>
 
   <section class="section" id="skills">
-    <div class="container">
+    <div class="section-boundary container">
       <div class="section-header-row">
         <span class="section-num">04</span>
         <h2 class="section-big-title">SKILLS & ARSENAL</h2>
       </div>
       <div class="skills-grid">
-        <div class="skill-group glass-card reveal-item">
-          <h3 class="skill-group-title"><i class="fa-solid fa-skull-crossbones"></i> // OFFENSIVE SEC & VAPT</h3>
+        <div class="skill-group glass-card interactive-card reveal-item">
+          <h3 class="skill-group-title"><i class="fa-solid fa-skull-crossbones"></i> OFFENSIVE SEC & VAPT</h3>
           <div class="skill-list">
             <div class="skill-item"><span class="skill-line"></span>Advanced Pen-Testing</div>
             <div class="skill-item"><span class="skill-line"></span>OWASP Top 10 & SQLi/XSS</div>
@@ -271,8 +280,8 @@
             <div class="skill-item"><span class="skill-line"></span>Vulnerability Assessment</div>
           </div>
         </div>
-        <div class="skill-group glass-card reveal-item">
-          <h3 class="skill-group-title"><i class="fa-solid fa-laptop-code"></i> // APPLIED AI & DEV</h3>
+        <div class="skill-group glass-card interactive-card reveal-item">
+          <h3 class="skill-group-title"><i class="fa-solid fa-laptop-code"></i> APPLIED AI & DEV</h3>
           <div class="skill-list">
             <div class="skill-item"><span class="skill-line"></span>Gen AI for Automated Sec-Ops</div>
             <div class="skill-item"><span class="skill-line"></span>AI-Assisted Threat Modeling</div>
@@ -280,8 +289,8 @@
             <div class="skill-item"><span class="skill-line"></span>Code Obfuscation & App Hardening</div>
           </div>
         </div>
-        <div class="skill-group glass-card reveal-item">
-          <h3 class="skill-group-title"><i class="fa-solid fa-cloud"></i> // ARCHITECTURE & CLOUD</h3>
+        <div class="skill-group glass-card interactive-card reveal-item">
+          <h3 class="skill-group-title"><i class="fa-solid fa-cloud"></i> ARCHITECTURE & CLOUD</h3>
           <div class="skill-list">
             <div class="skill-item"><span class="skill-line"></span>System Design & Scaling</div>
             <div class="skill-item"><span class="skill-line"></span>Cloud Security Protocols</div>
@@ -289,8 +298,8 @@
             <div class="skill-item"><span class="skill-line"></span>Secure API Development</div>
           </div>
         </div>
-        <div class="skill-group glass-card reveal-item">
-          <h3 class="skill-group-title"><i class="fa-solid fa-network-wired"></i> // LEADERSHIP & NETWORKS</h3>
+        <div class="skill-group glass-card interactive-card reveal-item">
+          <h3 class="skill-group-title"><i class="fa-solid fa-network-wired"></i> LEADERSHIP & NETWORKS</h3>
           <div class="skill-list">
             <div class="skill-item"><span class="skill-line"></span>Team & Product Management</div>
             <div class="skill-item"><span class="skill-line"></span>TCP/IP & Packet Analysis</div>
@@ -303,7 +312,7 @@
   </section>
 
   <section class="section" id="contact">
-    <div class="container">
+    <div class="section-boundary container">
       <div class="section-header-row">
         <span class="section-num">05</span>
         <h2 class="section-big-title">SECURE COMMS</h2>
@@ -313,25 +322,25 @@
           <h3 class="contact-headline">LET'S BUILD<br />AN IMPENETRABLE<br /><span>FUTURE.</span></h3>
           <p class="about-para" style="margin-bottom: 2rem;">Actively seeking high-impact roles where I can deploy my VAPT, System Design, Leadership, and Gen-AI methodologies.</p>
           <div class="contact-links-list">
-            <a href="mailto:Sakshmkaushik96@gmail.com" class="contact-link-item glass-card">
-              <span class="contact-label"><i class="fa-solid fa-envelope"></i> EMAIL</span>
+            <a href="mailto:Sakshmkaushik96@gmail.com" class="contact-link-item glass-card interactive-card">
+              <span class="contact-label"><i class="fa-solid fa-envelope" style="font-size: 1.5em; color: var(--accent-primary);"></i> EMAIL</span>
               <span class="contact-value" style="word-break: break-all;">Sakshmkaushik96@gmail.com</span>
               <span class="contact-arrow">&nearr;</span>
             </a>
-            <a href="https://linkedin.com/in/saksham-kaushik" target="_blank" rel="noopener" class="contact-link-item glass-card">
-              <span class="contact-label"><i class="fa-brands fa-linkedin"></i> LINKEDIN</span>
+            <a href="https://linkedin.com/in/saksham-kaushik" target="_blank" rel="noopener" class="contact-link-item glass-card interactive-card">
+              <span class="contact-label"><i class="fa-brands fa-linkedin" style="color: #0A66C2; font-size: 1.5em;"></i> LINKEDIN</span>
               <span class="contact-value">linkedin.com/in/saksham-kaushik</span>
               <span class="contact-arrow">&nearr;</span>
             </a>
-            <a href="https://github.com/Sakshmkaushik" target="_blank" rel="noopener" class="contact-link-item glass-card">
-              <span class="contact-label"><i class="fa-brands fa-github"></i> GITHUB</span>
+            <a href="https://github.com/Sakshmkaushik" target="_blank" rel="noopener" class="contact-link-item glass-card interactive-card">
+              <span class="contact-label"><i class="fa-brands fa-github" style="color: #ffffff; font-size: 1.5em;"></i> GITHUB</span>
               <span class="contact-value">Explore My Repositories</span>
               <span class="contact-arrow">&nearr;</span>
             </a>
           </div>
         </div>
         <div class="contact-right">
-          <form class="contact-form glass-card" id="contactForm" novalidate>
+          <form class="contact-form glass-card interactive-card" id="contactForm" novalidate>
             <div class="form-group">
               <label for="nameInput" class="form-label"><i class="fa-solid fa-user-secret"></i> IDENTIFIER</label>
               <input type="text" id="nameInput" name="name" class="form-input" placeholder="Enter your name or organization" required />
@@ -345,7 +354,7 @@
               <textarea id="messageInput" name="message" class="form-input form-textarea" placeholder="Detail your hiring requirement, project, or threat intelligence here..." required></textarea>
             </div>
             <button type="submit" class="btn-submit" id="submitBtn">
-              <span id="btnText"><i class="fa-solid fa-paper-plane"></i> TRANSMIT DATA</span>
+              <span id="btnText"><i class="fa-solid fa-paper-plane" style="font-size: 1.2em;"></i> TRANSMIT DATA</span>
               <span class="arrow-circle">&rarr;</span>
             </button>
             <div class="form-success" id="formSuccess">
