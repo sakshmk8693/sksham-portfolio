@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>SAKSHAM KAUSHIK | Cyber Security, VAPT & Web App Security</title>
+  <meta name="description" content="Saksham Kaushik — Cyber Security, VAPT, Mobile & Web Application Security, API Security, and Network Defense." />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet" />
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Ambient Background & Animations -->
+  <div class="ambient-bg">
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+  </div>
+
+  <div class="star-fall">
+    <span style="left: 20%; animation-duration: 9s; animation-delay: 0s;"></span>
+    <span style="left: 80%; animation-duration: 11s; animation-delay: 1.5s;"></span>
+  </div>
+
+  <!-- Custom Cursor Elements -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="cursor-torch" id="cursorTorch"></div>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-content">
+      <span class="preloader-number" id="preloaderNumber">0</span>
+      <div class="preloader-bar-track">
+        <div class="preloader-bar-fill" id="preloaderBar"></div>
+      </div>
+      <span class="preloader-label"><i class="fa-solid fa-microchip" style="color: var(--accent-primary); font-size: 1.2rem;"></i> INITIALIZING SYSTEM...</span>
+    </div>
+  </div>
+
+  <!-- Stylish Navbar -->
+  <nav class="navbar" id="navbar">
+    <a href="#home" class="nav-logo"><i class="fa-solid fa-terminal" style="color: var(--accent-primary); font-size: 1.2rem;"></i> SAKSHAM_KAUSHIK</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active">HOME</a></li>
+      <li><a href="#about" class="nav-link">ABOUT ME</a></li>
+      <li><a href="#education" class="nav-link">EDUCATION</a></li>
+      <li><a href="#experience" class="nav-link">EXPERIENCE & CERTS</a></li>
+      <li><a href="#projects" class="nav-link">PROJECTS</a></li>
+      <li><a href="#skills" class="nav-link">SKILLS</a></li>
+      <li><a href="#contact" class="nav-link">CONTACT</a></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="section hero" id="home">
+    <div class="section-boundary hero-boundary">
+      <div class="hero-3d-wrapper" id="hero3d">
+        <div class="hero-cartoon" id="heroCartoon">
+          <img src="cartoon-dev.png" alt="Cybersecurity Professional" onerror="this.src='cartoon-dev.jpg'; this.onerror=function(){this.style.display='none';}" />
+        </div>
+
+        <div class="hero-massive-text">
+          <div class="line line-1" data-scroll>WEB APP SECURITY</div>
+          <div class="line line-2 gradient-text-cyber" data-scroll>CYBER SECURITY</div>
+          <div class="line line-4" data-scroll>VAPT & API SEC</div>
+          <div class="line line-3 gradient-text" data-scroll>NETWORK DEFENSE</div>
+        </div>
+
+        <div class="hero-bottom">
+          <div class="hero-bottom-left">
+            <div class="hero-tech-chips">
+              <span class="chip"><i class="fa-solid fa-shield-halved"></i> BURP SUITE PRO</span>
+              <span class="chip"><i class="fa-solid fa-bug"></i> OWASP TOP 10</span>
+              <span class="chip"><i class="fa-solid fa-code-branch"></i> API SECURITY</span>
+              <span class="chip"><i class="fa-solid fa-crosshairs"></i> RECON & VAPT</span>
+              <span class="chip"><i class="fa-brands fa-linux"></i> KALI LINUX</span>
+              <span class="chip"><i class="fa-solid fa-mobile-screen"></i> MOBILE APP SEC</span>
+              <span class="chip"><i class="fa-solid fa-network-wired"></i> FIREWALL & NETWORK</span>
+              <span class="chip"><i class="fa-solid fa-flask"></i> PORTSWIGGER / THM</span>
+            </div>
+          </div>
+          <div class="hero-bottom-right glass-card interactive-card">
+            <p class="hero-description">
+              Cybersecurity professional with practical experience in Web Application Security Testing, Vulnerability Assessment (VAPT), API Testing, and Network Security. Skilled in Burp Suite, OWASP Top 10, reconnaissance, and manual penetration testing—backed by real-world government & enterprise VAPT assessments, PortSwigger, and TryHackMe labs.
+            </p>
+            <a href="SAKSHM KAUSHIK Resume.pdf" target="_blank" rel="noopener" class="cta-outline">
+              <span><i class="fa-regular fa-file-pdf" style="color: var(--alert-red); font-size: 1.2rem;"></i> EXTRACT DOSSIER (RESUME)</span>
+              <span class="arrow-circle">&rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="section" id="about">
+    <div class="section-boundary container">
+      <div class="section-header-row">
+        <span class="section-num">01</span>
+        <h2 class="section-big-title">ABOUT & PROFILE</h2>
+      </div>
+      <div class="about-layout">
+        
+        <!-- LEFT: ID CARD -->
+        <div class="id-card-content">
+          <div class="profile-square-wrap">
+            <img src="saksham image.png" alt="Saksham Kaushik" class="profile-img-square" onerror="this.src='https://via.placeholder.com/300'" />
+          </div>
+          
+          <div class="id-bottom-info">
+            <h2 class="id-name">SAKSHAM KAUSHIK</h2>
+            <p class="id-title"><i class="fa-solid fa-shield-halved"></i> CYBER SECURITY & VAPT ENGINEER</p>
+            <p style="font-family: var(--mono); font-size: 0.75rem; color: var(--text-dim); margin-bottom: 0.8rem;">
+              <i class="fa-solid fa-location-dot" style="color: var(--accent-primary);"></i> Noida, UP | <i class="fa-solid fa-phone" style="color: var(--accent-primary);"></i> +91 8630922242
+            </p>
+            
+            <div class="id-links">
+              <a href="https://linkedin.com/in/saksham-kaushik" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+              <a href="https://github.com/Sakshmkaushik" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="mailto:Sakshmkaushik96@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: PROFESSIONAL PROFILE (Shrink & Expand Logic + Moving Skills) -->
+        <div class="about-right glass-card interactive-card reveal-item" id="aboutRightCard">
+          <h3 class="about-subtitle"><i class="fa-solid fa-user-ninja"></i> PROFESSIONAL PROFILE & OBJECTIVE</h3>
+          
+          <div class="about-text-wrap" id="aboutTextWrap">
+            <p class="about-para">
+              I am a dedicated Cybersecurity and VAPT professional with hands-on experience in Web Application Security Testing, Vulnerability Assessment, and comprehensive VAPT Reporting. Currently working as a Web Application Security Tester at Sky Wave and having completed intensive VAPT engagements at Securium Solutions Pvt. Ltd. for government and private sector projects, I specialize in uncovering critical security flaws before malicious actors can exploit them.
+            </p>
+            <p class="about-para">
+              My offensive security workflow involves deep reconnaissance, service enumeration, and manual vulnerability testing across the OWASP Web & API Top 10 frameworks—including SQL Injection (SQLi), Cross-Site Scripting (XSS), XXE, BOLA/IDOR, Broken Authentication, Access Control flaws, and Security Misconfigurations. I heavily utilize Burp Suite (Proxy, Repeater, Intruder), Postman, Nmap, Gobuster, Nikto, and cURL, while continuously sharpening my exploitation skills on PortSwigger Web Security Academy and TryHackMe labs.
+            </p>
+            <p class="about-para">
+              Alongside web and API penetration testing, I possess a strong foundation in Enterprise Network Security (TCP/IP, VLAN, OSPF, NAT, ACLs, Firewalls, Wireshark packet analysis) and Mobile Application Security. I have practical experience in Android app security testing (APK static analysis, Burp traffic interception, OWASP MASVS/MSTG) and secure Flutter development featuring device binding, DRM protection, and encrypted authentication.
+            </p>
+            <p class="about-para">
+              Backed by a B.Tech in Computer Science & Engineering from AKTU (7.09 CGPA) and active involvement as a CyberPeace Dialogue Volunteer at IIIT Delhi, I excel at translating complex technical exploits into clear Proof of Concepts (PoCs), risk impact analyses, and actionable remediation strategies for engineering teams.
+            </p>
+          </div>
+
+          <!-- VIEW MORE BUTTON (For Mobile 3-Stage Expansion) -->
+          <button id="viewMoreBtn" class="cta-outline" style="margin-top: 1.5rem; font-size: 0.85rem; padding: 0.5rem 1.2rem; display: none;" onclick="expandAboutFully(event)">
+            <span>VIEW DETAILED PROFILE</span> <span class="arrow-circle">&darr;</span>
+          </button>
+
+          <!-- ANIMATED SCROLLING SKILLS PILLS -->
+          <div class="profile-skills-scroller">
+            <div class="scroller-track">
+              <span class="skill-pill">WEB APP VAPT</span>
+              <span class="skill-pill">BURP SUITE</span>
+              <span class="skill-pill">OWASP TOP 10</span>
+              <span class="skill-pill">API SECURITY</span>
+              <span class="skill-pill">SQLi & XSS</span>
+              <span class="skill-pill">BOLA / IDOR</span>
+              <span class="skill-pill">PORTSWIGGER</span>
+              <!-- Duplicate for loop -->
+              <span class="skill-pill">WEB APP VAPT</span>
+              <span class="skill-pill">BURP SUITE</span>
+              <span class="skill-pill">OWASP TOP 10</span>
+              <span class="skill-pill">API SECURITY</span>
+              <span class="skill-pill">SQLi & XSS</span>
+              <span class="skill-pill">BOLA / IDOR</span>
+              <span class="skill-pill">PORTSWIGGER</span>
+            </div>
+            <div class="scroller-track track-reverse">
+              <span class="skill-pill">TRYHACKME</span>
+              <span class="skill-pill">NMAP & GOBUSTER</span>
+              <span class="skill-pill">MOBILE APP SEC</span>
+              <span class="skill-pill">MASVS / MSTG</span>
+              <span class="skill-pill">KALI LINUX</span>
+              <span class="skill-pill">WIRESHARK</span>
+              <span class="skill-pill">VAPT REPORTING</span>
+              <!-- Duplicate for loop -->
+              <span class="skill-pill">TRYHACKME</span>
+              <span class="skill-pill">NMAP & GOBUSTER</span>
+              <span class="skill-pill">MOBILE APP SEC</span>
+              <span class="skill-pill">MASVS / MSTG</span>
+              <span class="skill-pill">KALI LINUX</span>
+              <span class="skill-pill">WIRESHARK</span>
+              <span class="skill-pill">VAPT REPORTING</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION SECTION -->
+  <section class="section" id="education">
+    <div class="section-boundary container">
+      <div class="section-header-row">
+        <span class="section-num">02</span>
+        <h2 class="section-big-title">EDUCATION</h2>
+      </div>
+      <div class="certs-grid">
+        <div class="cert-card glass-card interactive-card reveal-item">
+          <div class="cert-indicator"></div>
+          <h3 class="cert-title"><i class="fa-solid fa-graduation-cap" style="color: var(--accent-primary);"></i> B.Tech (CSE) — 7.09 CGPA</h3>
+          <p class="cert-issuer">Dr. A.P.J. Abdul Kalam Technical University (AKTU) | 2022 – 2026</p>
+          <p class="cert-desc">Bachelor of Technology in Computer Science & Engineering with 7.09 CGPA. Focused on Cyber Security, Web & Mobile Application Security, Networking, and System Design.</p>
+        </div>
+        <div class="cert-card glass-card interactive-card reveal-item">
+          <div class="cert-indicator"></div>
+          <h3 class="cert-title"><i class="fa-solid fa-microchip" style="color: var(--accent-secondary);"></i> ITI Electronics Mechanic — 75%</h3>
+          <p class="cert-issuer">Government ITI, Kharkhauda, Meerut, UP | 2018 – 2020</p>
+          <p class="cert-desc">Completed Industrial Training with 75%. Gained strong hands-on experience in hardware components, electronic circuit design, troubleshooting, and system maintenance.</p>
+        </div>
+        <div class="cert-card glass-card interactive-card reveal-item">
+          <div class="cert-indicator"></div>
+          <h3 class="cert-title"><i class="fa-solid fa-school" style="color: var(--neon-orange);"></i> Senior Secondary (12th) — 62%</h3>
+          <p class="cert-issuer">Tagore Shiksha Sadan, Hapur, UP | 2017 – 2018</p>
+          <p class="cert-desc">Completed Higher Secondary Education under the UP Board with 62%, building a solid analytical foundation in core sciences and mathematics.</p>
+        </div>
+        <div class="cert-card glass-card interactive-card reveal-item">
+          <div class="cert-indicator"></div>
+          <h3 class="cert-title"><i class="fa-solid fa-book" style="color: var(--alert-red);"></i> Secondary (10th) — 73%</h3>
+          <p class="cert-issuer">Shanti Swarup Krishi Inter College, Hapur, UP | 2015 – 2016</p>
+          <p class="cert-desc">Completed Secondary Education under the UP Board with 73%.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE & CERTS SECTION -->
+  <section class="section" id="experience">
+    <div class="section-boundary container">
+      <div class="section-header-row">
+        <span class="section-num">03</span>
+        <h2 class="section-big-title">EXPERIENCE & CREDENTIALS</h2>
+      </div>
+      
+      <h3 class="skill-group-title"><i class="fa-solid fa-briefcase"></i> // WORK EXPERIENCE & INTERNSHIPS</h3>
+      <div class="certs-grid" style="margin-bottom: 3rem;">
+        
+        <div class="cert-card glass-card interactive-card reveal-item">
+          <div class="cert-indicator"></div>
+          <h3 class="cert-title"><i class="fa-solid fa-shield-virus" style="color: #00ff88;"></i> Web Application Security Tester</h3>
+          <p class="cert-issuer">Sky Wave | Meerut, UP (Hybrid) | Aug 2025 – Present</p>
+          <p class="cert-desc">Conducting continuous website security testing, identifying application-layer vulnerabilities, supporting engineering teams in remediation, and protecting sensitive customer data stored in production databases.</p>
+        </div>
+
+        <div class="cert-card glass-card interactive-card reveal-item">
+          <div class="cert-indicator"></div>
+          <h3 class="cert-title"><i class="fa-solid fa-bug-slash" style="color: var(--accent-primary);"></i> VAPT Intern</h3>
+          <p class="cert-issuer">Securium Solutions Pvt. Ltd. | Noida, UP (On-site) | Sep 2026 – Oct 2026</p>
+          <p class="cert-desc">Worked on authorized Web Application VAPT and security assessments for government and private projects. Performed reconnaissance, enumeration, and manual vulnerability testing, documenting findings with PoC evidence, impact analysis, and remediation recommendations.</p>
+        </div>
+
+        <div class="cert-card glass-card interactive-card reveal-item">
+          <div class="cert-indicator"></div>
+          <h3 class="cert-title"><i class="fa-solid fa-user-secret" style="color: var(--accent-secondary);"></i> Cyber Security Intern</h3>
+          <p class="cert-issuer">Codec Technologies Pvt. Ltd. | Powai, Mumbai (Online) | Oct 2025 – Jan 2026</p>
+          <p class="cert-desc">Completed a 3-month AICTE & ICAC-approved internship covering cybersecurity fundamentals, VAPT methodologies, manual security testing, network traffic analysis, and structured vulnerability reporting.</p>
+        </div>
+
+        <div class="cert-card glass-card interactive-card reveal-item">
+          <div class="cert-indicator"></div>
+          <h3 class="cert-title"><i class="fa-solid fa-network-wired" style="color: var(--accent-primary);"></i> Network Security Intern</h3>
+          <p class="cert-issuer">ITPF Technology Private Limited | Mar 2025 – Jun 2025</p>
+          <p class="cert-desc">Worked on the "Design and Analysis of TAXNET Network". Handled routing, switching, network segmentation, and enterprise network security infrastructure concepts.</p>
+        </div>
+
+        <div class="cert-card glass-card interactive-card reveal-item">
+          <div class="cert-indicator"></div>
+          <h3 class="cert-title"><i class="fa-solid fa-handshake-angle" style="color: var(--neon-orange);"></i> CyberPeace Dialogue Volunteer</h3>
+          <p class="cert-issuer">IIIT Delhi | New Delhi | Dec 2024</p>
+          <p class="cert-desc">Actively participated in cybersecurity awareness initiatives, technical threat-mitigation sessions, and collaborative dialogue events at IIIT Delhi aimed at promoting digital safety and cyber hygiene.</p>
+        </div>
+
+      </div>
+
+      <h3 class="skill-group-title"><i class="fa-solid fa-certificate"></i> // CERTIFICATIONS & HANDS-ON LABS</h3>
+      <div class="certs-grid">
+        <div class="cert-card glass-card interactive-card reveal-item">
+          <div class="cert-indicator"></div>
+          <h3 class="cert-title"><i class="fa-solid fa-award" style="color: var(--accent-primary);"></i> VAPT Engineer Intern</h3>
+          <p class="cert-issuer">Securium Solutions Pvt. Ltd. | Certified VAPT Intern</p>
+          <p class="cert-desc">Certified for successfully executing authorized Web Application VAPT and security assessments on government and corporate targets.</p>
+        </div>
+        <div class="cert-card glass-card interactive-card reveal-item">
+          <div class="cert-indicator"></div>
+          <h3 class="cert-title"><i class="fa-solid fa-shield-heart" style="color: var(--neon-orange);"></i> CyberPeace Dialogue Volunteer</h3>
+          <p class="cert-issuer">IIIT Delhi | Official Volunteer Certification</p>
+          <p class="cert-desc">Recognized for active contribution to cybersecurity awareness, policy discussions, and technical community sessions at IIIT Delhi.</p>
+        </div>
+        <div class="cert-card glass-card interactive-card reveal-item">
+          <div class="cert-indicator"></div>
+          <h3 class="cert-title"><i class="fa-solid fa-file-shield" style="color: var(--accent-secondary);"></i> Cyber Security Internship</h3>
+          <p class="cert-issuer">Codec Technologies Pvt. Ltd. (AICTE & ICAC Approved) | Jan 2026</p>
+          <p class="cert-desc">AICTE-approved credential validating practical training in VAPT, security testing, and vulnerability documentation.</p>
+        </div>
+        <div class="cert-card glass-card interactive-card reveal-item">
+          <div class="cert-indicator"></div>
+          <h3 class="cert-title"><i class="fa-solid fa-user-ninja" style="color: var(--accent-primary);"></i> Ethical Hacker Course</h3>
+          <p class="cert-issuer">Cisco Networking Academy | Certified</p>
+          <p class="cert-desc">Comprehensive training in offensive security, vulnerability scanning, exploitation techniques, and penetration testing reporting.</p>
+        </div>
+        <div class="cert-card glass-card interactive-card reveal-item">
+          <div class="cert-indicator"></div>
+          <h3 class="cert-title"><i class="fa-solid fa-lock" style="color: #00ff88;"></i> Cybersecurity Essentials</h3>
+          <p class="cert-issuer">Cisco Networking Academy | Certified</p>
+          <p class="cert-desc">Covered foundational security principles, threat defense, cryptography basics, and securing network infrastructures.</p>
+        </div>
+        <div class="cert-card glass-card interactive-card reveal-item">
+          <div class="cert-indicator"></div>
+          <h3 class="cert-title"><i class="fa-solid fa-server" style="color: var(--accent-primary);"></i> Intro to Networks (CCNA)</h3>
+          <p class="cert-issuer">Cisco Networking Academy | CCNA Fundamentals</p>
+          <p class="cert-desc">Mastered IPv4/IPv6 subnetting, OSI & TCP/IP models, router/switch configuration, and network protocol analysis.</p>
+        </div>
+        <div class="cert-card glass-card interactive-card reveal-item">
+          <div class="cert-indicator"></div>
+          <h3 class="cert-title"><i class="fa-solid fa-terminal" style="color: var(--alert-red);"></i> Practical Ethical Hacking</h3>
+          <p class="cert-issuer">TCM Security | Hands-on Training</p>
+          <p class="cert-desc">Practical coursework focused on Active Directory enumeration, web app pentesting, reconnaissance, and real-world exploitation.</p>
+        </div>
+        <div class="cert-card glass-card interactive-card reveal-item">
+          <div class="cert-indicator"></div>
+          <h3 class="cert-title"><i class="fa-solid fa-cloud" style="color: var(--accent-secondary);"></i> Ethical Hacking, Cloud & System Design</h3>
+          <p class="cert-issuer">Tutedude | Technical Certification</p>
+          <p class="cert-desc">Multi-disciplinary certification covering offensive hacking methodologies, cloud architecture basics, and scalable system design.</p>
+        </div>
+        <div class="cert-card glass-card interactive-card reveal-item">
+          <div class="cert-indicator"></div>
+          <h3 class="cert-title"><i class="fa-solid fa-briefcase" style="color: var(--neon-orange);"></i> Cyber Job Simulations</h3>
+          <p class="cert-issuer">Tata (Forage) & Deloitte (Forage) | Completed</p>
+          <p class="cert-desc">Completed industry-simulated cybersecurity analyst tasks including IAM, log analysis, incident response, and vulnerability triage.</p>
+        </div>
+        <div class="cert-card glass-card interactive-card reveal-item">
+          <div class="cert-indicator"></div>
+          <h3 class="cert-title"><i class="fa-solid fa-flask-vial" style="color: #00ff88;"></i> PortSwigger & TryHackMe Labs</h3>
+          <p class="cert-issuer">Continuous Hands-On Offensive Security Practice</p>
+          <p class="cert-desc">Actively solving practical web security labs (SQLi, XSS, XXE, SSRF, Access Control, Auth bypass) and CTF challenges.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section class="section" id="projects">
+    <div class="section-boundary container">
+      <div class="section-header-row">
+        <span class="section-num">04</span>
+        <h2 class="section-big-title">PROJECTS & SECURITY RESEARCH</h2>
+      </div>
+
+      <div class="project-list">
+        
+        <article class="project-item glass-card interactive-card reveal-item" data-index="0">
+          <div class="project-index">01</div>
+          <div class="project-body">
+            <div class="project-header">
+              <h3 class="project-name"><i class="fa-solid fa-building-columns"></i> Government Web Application VAPT — Confidential Client</h3>
+              <div class="project-links">
+                <span class="btn-live" style="cursor: default;">
+                  <span class="live-dot"></span> Securium Solutions
+                </span>
+              </div>
+            </div>
+            <p class="project-desc">Executed authorized end-to-end Web Application VAPT, deep reconnaissance, and manual penetration testing on live government web infrastructure.</p>
+            <div class="project-meta-row">
+              <span class="meta-tag"><i class="fa-solid fa-shield-halved"></i> AUTHORIZED VAPT</span>
+              <span class="meta-tag"><i class="fa-solid fa-bug"></i> OWASP TOP 10</span>
+              <span class="meta-tag"><i class="fa-solid fa-code"></i> SQLi & XSS</span>
+              <span class="meta-tag"><i class="fa-solid fa-file-contract"></i> POC REPORTING</span>
+            </div>
+            <div class="project-challenge">
+              <div class="challenge-line"></div>
+              <span>Identified critical OWASP Top 10 vulnerabilities including Cross-Site Scripting (XSS), SQL Injection, and sensitive information disclosure, delivering comprehensive VAPT reports with Proof-of-Concept (PoC) evidence, risk impact, and remediation steps.</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-item glass-card interactive-card reveal-item" data-index="1">
+          <div class="project-index">02</div>
+          <div class="project-body">
+            <div class="project-header">
+              <h3 class="project-name"><i class="fa-solid fa-book-open-reader"></i> ENGINEERING EXPRESS — Secure Educational Web & Mobile App</h3>
+              <div class="project-links">
+                <a href="https://eexpress.in" target="_blank" rel="noopener" class="btn-live">
+                  <span class="live-dot"></span> eexpress.in
+                </a>
+              </div>
+            </div>
+            <p class="project-desc">Developed a full-scale Flutter-based educational mobile and web application featuring encrypted user authentication and secure digital notes delivery.</p>
+            <div class="project-meta-row">
+              <span class="meta-tag"><i class="fa-brands fa-flutter" style="color: #54C5F8;"></i> FLUTTER</span>
+              <span class="meta-tag"><i class="fa-solid fa-lock"></i> DEVICE BINDING & DRM</span>
+              <span class="meta-tag"><i class="fa-solid fa-shield-virus"></i> BURP SUITE API TESTING</span>
+            </div>
+            <div class="project-challenge">
+              <div class="challenge-line"></div>
+              <span>Implemented hardware device binding, protected PDF viewing, and strict access restrictions, followed by rigorous security testing of authentication flows, authorization logic, and REST API requests using Burp Suite.</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-item glass-card interactive-card reveal-item" data-index="2">
+          <div class="project-index">03</div>
+          <div class="project-body">
+            <div class="project-header">
+              <h3 class="project-name"><i class="fa-solid fa-shield-virus"></i> Web Application VAPT — OWASP Security Testing Lab</h3>
+            </div>
+            <p class="project-desc">Performed intensive manual vulnerability assessments across intentionally vulnerable web applications to master real-world exploitation vectors.</p>
+            <div class="project-meta-row">
+              <span class="meta-tag"><i class="fa-solid fa-crosshairs"></i> BURP PROXY / REPEATER / INTRUDER</span>
+              <span class="meta-tag"><i class="fa-solid fa-key"></i> AUTH & ACCESS CONTROL</span>
+              <span class="meta-tag"><i class="fa-solid fa-file-shield"></i> VAPT REPORT</span>
+            </div>
+            <div class="project-challenge">
+              <div class="challenge-line"></div>
+              <span>Conducted manual payload injection for SQL Injection, XSS, broken authentication, and access control flaws using Burp Suite Proxy, Repeater, and Intruder, compiling professional VAPT reports with PoC and remediation guidelines.</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-item glass-card interactive-card reveal-item" data-index="3">
+          <div class="project-index">04</div>
+          <div class="project-body">
+            <div class="project-header">
+              <h3 class="project-name"><i class="fa-solid fa-radar"></i> Web Reconnaissance & Vulnerability Assessment Lab</h3>
+            </div>
+            <p class="project-desc">Executed systematic offensive reconnaissance, attack surface mapping, and vulnerability enumeration across target lab environments.</p>
+            <div class="project-meta-row">
+              <span class="meta-tag"><i class="fa-solid fa-terminal"></i> NMAP</span>
+              <span class="meta-tag"><i class="fa-solid fa-folder-tree"></i> GOBUSTER</span>
+              <span class="meta-tag"><i class="fa-solid fa-magnifying-glass"></i> NIKTO & cURL</span>
+            </div>
+            <div class="project-challenge">
+              <div class="challenge-line"></div>
+              <span>Utilized Nmap, Gobuster, Nikto, and cURL to uncover exposed services, hidden directories, API endpoints, and security misconfigurations, documenting all findings into structured risk assessment reports.</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-item glass-card interactive-card reveal-item" data-index="4">
+          <div class="project-index">05</div>
+          <div class="project-body">
+            <div class="project-header">
+              <h3 class="project-name"><i class="fa-solid fa-building-shield"></i> SAKSHAM CSC CENTER — Digital Service Portal</h3>
+              <div class="project-links">
+                <a href="http://localhost:3000" target="_blank" rel="noopener" class="btn-live">
+                  <span class="live-dot" style="background-color: var(--neon-orange);"></span> localhost:3000
+                </a>
+              </div>
+            </div>
+            <p class="project-desc">Designed and developed a dedicated service portal and web platform for Saksham CSC Center, focusing on a clean UI, fast performance, and seamless citizen service workflows.</p>
+            <div class="project-meta-row">
+              <span class="meta-tag"><i class="fa-brands fa-html5"></i> HTML5 / CSS3</span>
+              <span class="meta-tag"><i class="fa-brands fa-js"></i> JAVASCRIPT</span>
+              <span class="meta-tag"><i class="fa-solid fa-laptop-code"></i> RESPONSIVE UI</span>
+            </div>
+            <div class="project-challenge">
+              <div class="challenge-line"></div>
+              <span>Built a fully responsive, accessible, and interactive web presence customized for local Digital India & CSC e-Governance services.</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-item glass-card interactive-card reveal-item" data-index="5">
+          <div class="project-index">06</div>
+          <div class="project-body">
+            <div class="project-header">
+              <h3 class="project-name"><i class="fa-solid fa-server"></i> Enterprise Network Design & Segmentation</h3>
+            </div>
+            <p class="project-desc">Architected a secure multi-department enterprise network topology using Cisco Packet Tracer with end-to-end connectivity and perimeter security controls.</p>
+            <div class="project-meta-row">
+              <span class="meta-tag"><i class="fa-solid fa-network-wired"></i> VLAN / OSPF</span>
+              <span class="meta-tag"><i class="fa-solid fa-fire-burner"></i> NAT & ACL</span>
+              <span class="meta-tag"><i class="fa-solid fa-server"></i> DHCP & PORT SEC</span>
+            </div>
+            <div class="project-challenge">
+              <div class="challenge-line"></div>
+              <span>Configured VLANs, Inter-VLAN Routing, Static Routing, Basic OSPF, STP, and Access Control Lists (ACLs) to enforce strict network segmentation and packet filtering.</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-item glass-card interactive-card reveal-item" data-index="6">
+          <div class="project-index">07</div>
+          <div class="project-body">
+            <div class="project-header">
+              <h3 class="project-name"><i class="fa-solid fa-magnifying-glass-chart"></i> Deep Network Traffic & Packet Analysis</h3>
+            </div>
+            <p class="project-desc">Captured and inspected live TCP, UDP, ICMP, DNS, and HTTP protocol traffic using Wireshark for anomaly detection and network troubleshooting.</p>
+            <div class="project-meta-row">
+              <span class="meta-tag"><i class="fa-solid fa-network-wired"></i> WIRESHARK</span>
+              <span class="meta-tag"><i class="fa-solid fa-bug"></i> PACKET INSPECTION</span>
+            </div>
+            <div class="project-challenge">
+              <div class="challenge-line"></div>
+              <span>Analyzed the TCP Three-Way Handshake, DNS resolution flows, and cleartext HTTP requests to identify suspicious traffic patterns and network bottlenecks.</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-item glass-card interactive-card reveal-item" data-index="7">
+          <div class="project-index">08</div>
+          <div class="project-body">
+            <div class="project-header">
+              <h3 class="project-name"><i class="fa-solid fa-cart-shopping"></i> VANYA GIFTS — Full-Stack E-Commerce Architecture</h3>
+            </div>
+            <p class="project-desc">Designed the end-to-end full-stack system architecture for a scalable retail e-commerce platform encompassing mobile client, web storefront, and admin dashboard.</p>
+            <div class="project-meta-row">
+              <span class="meta-tag"><i class="fa-solid fa-sitemap"></i> SYSTEM DESIGN</span>
+              <span class="meta-tag"><i class="fa-solid fa-key"></i> SECURE AUTH</span>
+            </div>
+            <div class="project-challenge">
+              <div class="challenge-line"></div>
+              <span>Engineered secure user authentication, protected transactional workflows, and real-time database synchronization to prevent unauthorized data exposure.</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION (ALL 12 RESUME CATEGORIES COVERED) -->
+  <section class="section" id="skills">
+    <div class="section-boundary container">
+      <div class="section-header-row">
+        <span class="section-num">05</span>
+        <h2 class="section-big-title">SKILLS & TECHNICAL ARSENAL</h2>
+      </div>
+      <div class="skills-grid">
+        
+        <div class="skill-group glass-card interactive-card reveal-item">
+          <h3 class="skill-group-title"><i class="fa-solid fa-globe"></i> WEB APP & API SECURITY</h3>
+          <div class="skill-list">
+            <div class="skill-item"><span class="skill-line"></span>OWASP Top 10, SQL Injection (SQLi), XSS, XXE</div>
+            <div class="skill-item"><span class="skill-line"></span>Auth, Authorization & Access Control Testing</div>
+            <div class="skill-item"><span class="skill-line"></span>REST API Testing (Burp Suite & Postman)</div>
+            <div class="skill-item"><span class="skill-line"></span>OWASP API Top 10: BOLA/IDOR, Mass Assignment</div>
+            <div class="skill-item"><span class="skill-line"></span>Excessive Data Exposure, Rate Limiting, Misconfigs</div>
+          </div>
+        </div>
+
+        <div class="skill-group glass-card interactive-card reveal-item">
+          <h3 class="skill-group-title"><i class="fa-solid fa-crosshairs"></i> BURP SUITE & RECONNAISSANCE</h3>
+          <div class="skill-list">
+            <div class="skill-item"><span class="skill-line"></span>Burp Suite: Proxy, Repeater, Intruder</div>
+            <div class="skill-item"><span class="skill-line"></span>HTTP Request/Response Analysis & Manual Testing</div>
+            <div class="skill-item"><span class="skill-line"></span>Nmap, Gobuster, Nikto & cURL Enumeration</div>
+            <div class="skill-item"><span class="skill-line"></span>Service Enumeration & Web Tech Identification</div>
+            <div class="skill-item"><span class="skill-line"></span>Nessus, Metasploit & Wireshark Packet Analysis</div>
+          </div>
+        </div>
+
+        <div class="skill-group glass-card interactive-card reveal-item">
+          <h3 class="skill-group-title"><i class="fa-solid fa-file-shield"></i> VAPT & SECURITY REPORTING</h3>
+          <div class="skill-list">
+            <div class="skill-item"><span class="skill-line"></span>Vulnerability Identification & Manual Validation</div>
+            <div class="skill-item"><span class="skill-line"></span>Risk Assessment & Impact Analysis</div>
+            <div class="skill-item"><span class="skill-line"></span>Proof of Concept (PoC) & Evidence Collection</div>
+            <div class="skill-item"><span class="skill-line"></span>Actionable Remediation Recommendations</div>
+            <div class="skill-item"><span class="skill-line"></span>Structured Professional VAPT Documentation</div>
+          </div>
+        </div>
+
+        <div class="skill-group glass-card interactive-card reveal-item">
+          <h3 class="skill-group-title"><i class="fa-solid fa-network-wired"></i> NETWORKING & NETWORK SECURITY</h3>
+          <div class="skill-list">
+            <div class="skill-item"><span class="skill-line"></span>TCP/IP, DNS, DHCP, NAT & ACL Configuration</div>
+            <div class="skill-item"><span class="skill-line"></span>Firewalls, Network Segmentation & Basic VPN</div>
+            <div class="skill-item"><span class="skill-line"></span>Subnetting, VLAN, Inter-VLAN Routing & STP</div>
+            <div class="skill-item"><span class="skill-line"></span>Static Routing, Basic OSPF & Port Security</div>
+            <div class="skill-item"><span class="skill-line"></span>Cisco Packet Tracer Network Simulation</div>
+          </div>
+        </div>
+
+        <div class="skill-group glass-card interactive-card reveal-item">
+          <h3 class="skill-group-title"><i class="fa-solid fa-mobile-screen-button"></i> MOBILE APP SECURITY & DEV</h3>
+          <div class="skill-list">
+            <div class="skill-item"><span class="skill-line"></span>Android App Security Testing Basics</div>
+            <div class="skill-item"><span class="skill-line"></span>Mobile Traffic Interception with Burp Suite</div>
+            <div class="skill-item"><span class="skill-line"></span>Static Analysis of APKs & OWASP MASVS/MSTG</div>
+            <div class="skill-item"><span class="skill-line"></span>Device Binding, Code Obfuscation & DRM</div>
+            <div class="skill-item"><span class="skill-line"></span>Python, Bash, PHP & Dart (Flutter)</div>
+          </div>
+        </div>
+
+        <div class="skill-group glass-card interactive-card reveal-item">
+          <h3 class="skill-group-title"><i class="fa-brands fa-linux"></i> LINUX, KALI & HANDS-ON LABS</h3>
+          <div class="skill-list">
+            <div class="skill-item"><span class="skill-line"></span>Linux & Kali Linux System Administration</div>
+            <div class="skill-item"><span class="skill-line"></span>File Permissions, SSH & Networking Commands</div>
+            <div class="skill-item"><span class="skill-line"></span>Bash Scripting Basics & CLI Security Testing</div>
+            <div class="skill-item"><span class="skill-line"></span>PortSwigger Web Security Academy Labs</div>
+            <div class="skill-item"><span class="skill-line"></span>TryHackMe Offensive & Defensive Rooms</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="section" id="contact">
+    <div class="section-boundary container">
+      <div class="section-header-row">
+        <span class="section-num">06</span>
+        <h2 class="section-big-title">SECURE COMMS</h2>
+      </div>
+      <div class="contact-layout">
+        <div class="contact-left">
+          <h3 class="contact-headline">LET'S SECURE<br />THE DIGITAL<br /><span>FRONTIER.</span></h3>
+          <p class="about-para" style="margin-bottom: 2rem;">Actively seeking a Web Application Security, VAPT, or Network Security role where I can apply my offensive testing skills, uncover critical vulnerabilities, and help organizations harden their digital assets.</p>
+          <div class="contact-links-list">
+            <a href="mailto:Sakshmkaushik96@gmail.com" class="contact-link-item glass-card interactive-card">
+              <span class="contact-label"><i class="fa-solid fa-envelope" style="font-size: 1.5em; color: var(--accent-primary);"></i> EMAIL</span>
+              <span class="contact-value" style="word-break: break-all;">Sakshmkaushik96@gmail.com</span>
+              <span class="contact-arrow">&nearr;</span>
+            </a>
+            <a href="tel:+918630922242" class="contact-link-item glass-card interactive-card">
+              <span class="contact-label"><i class="fa-solid fa-phone" style="font-size: 1.5em; color: #00ff88;"></i> PHONE</span>
+              <span class="contact-value">+91 8630922242 (Noida, UP)</span>
+              <span class="contact-arrow">&nearr;</span>
+            </a>
+            <a href="https://linkedin.com/in/saksham-kaushik" target="_blank" rel="noopener" class="contact-link-item glass-card interactive-card">
+              <span class="contact-label"><i class="fa-brands fa-linkedin" style="color: #0A66C2; font-size: 1.5em;"></i> LINKEDIN</span>
+              <span class="contact-value">linkedin.com/in/saksham-kaushik</span>
+              <span class="contact-arrow">&nearr;</span>
+            </a>
+            <a href="https://github.com/Sakshmkaushik" target="_blank" rel="noopener" class="contact-link-item glass-card interactive-card">
+              <span class="contact-label"><i class="fa-brands fa-github" style="color: #ffffff; font-size: 1.5em;"></i> GITHUB</span>
+              <span class="contact-value">github.com/Sakshmkaushik</span>
+              <span class="contact-arrow">&nearr;</span>
+            </a>
+          </div>
+        </div>
+        <div class="contact-right">
+          <form class="contact-form glass-card interactive-card" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="nameInput" class="form-label"><i class="fa-solid fa-user-secret"></i> IDENTIFIER</label>
+              <input type="text" id="nameInput" name="name" class="form-input" placeholder="Enter your name or organization" required />
+            </div>
+            <div class="form-group">
+              <label for="emailInput" class="form-label"><i class="fa-solid fa-at"></i> RETURN ADDRESS</label>
+              <input type="email" id="emailInput" name="email" class="form-input" placeholder="you@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="messageInput" class="form-label"><i class="fa-solid fa-lock"></i> ENCRYPTED PAYLOAD</label>
+              <textarea id="messageInput" name="message" class="form-input form-textarea" placeholder="Detail your VAPT requirement, hiring opportunity, or security query here..." required></textarea>
+            </div>
+            <button type="submit" class="btn-submit" id="submitBtn">
+              <span id="btnText"><i class="fa-solid fa-paper-plane" style="font-size: 1.2em;"></i> TRANSMIT DATA</span>
+              <span class="arrow-circle">&rarr;</span>
+            </button>
+            <div class="form-success" id="formSuccess">
+              [+] TRANSMISSION SUCCESSFUL.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STYLISH FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner container">
+      <span class="footer-left"><i class="fa-solid fa-code" style="color: var(--accent-primary);"></i> DESIGNED & SECURED BY SAKSHAM KAUSHIK</span>
+      <span class="footer-right"><i class="fa-solid fa-shield-halved" style="color: #00ff88;"></i> ALL SYSTEMS OPERATIONAL | ZERO BREACHES</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
